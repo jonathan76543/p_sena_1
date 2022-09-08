@@ -1,0 +1,62 @@
+{
+  "name": "hoteles-guias",
+  "version": "1.0.0",
+  "description": "nuestro primer proyecto en nodejs",
+  "main": "index.html",
+  "scripts": {
+    "dev": "lite-server",
+    " test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange\"css/*.scss\"- npm run scss",
+    "start": "concurrently\"npm run watch:scss\"\"npm run dev\"",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin images/* --out-dir dist/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin about.html -d dist --htmlmin -o dist/about.html && usemin precios.html -d dist --htmlmin -o dist/precios.html && usemin contacto.html -d dist --htmlmin -o dist/contacto.html",
+    "build": "npm run clean && npm run scss && npm run imagemin && npm run usemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jonathan721@bitbucket.org/jonathan721/hoteles-guias.git"
+  },
+  "author": "jonathan rico",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jonathan721/hoteles-guias#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.2",
+    "rimraf": "^3.0.2",
+    "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-css": "^0.5.4",
+    "grunt-filerev": "^2.3.1",
+    "grunt-usemin": "^3.1.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-usemin": "^0.3.30",
+    "htmlmin": "0.0.7"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.1",
+    "concurrently": "^6.2.1",
+    "jquery": "^3.5.1",
+    "open-iconic": "^1.1.1",
+    "popper.js": "^1.16.1",
+    "sass": "^1.37.5"
+  }
+}
